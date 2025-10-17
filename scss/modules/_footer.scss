@@ -14,6 +14,13 @@
 .footer__svg-link {
     background-color: #EDFFFC;
     color:   #EDFFFC;
+    &:hover{
+        color: $clr-btnbc;
+        opacity: 20%;
+    }
+    &:active{
+        opacity: 50%;
+    }
 }
 .footer__center-part {
     @include  Displey ($items: center, $justify:space-between, $gap:129px);
@@ -26,6 +33,13 @@
 .footer__link {
     @include TextStyle($FW: 400, $FZ: 16px, $LH:35px,$LS: 0px, $clr: $clr-bulue, $BM:8px);
     opacity: 80%;
+
+    &:hover{
+        color: $clr-btnbc;
+    }
+    &:active{
+        opacity: 60%;
+    }
 }
 .footer__input-part {
     width: 325px;

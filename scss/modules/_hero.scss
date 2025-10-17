@@ -22,6 +22,13 @@
     @include TextStyle($FW: 600, $FZ: 16px, $LH: 100%,$LS: 0px, $clr: $clr-btnbc , $BM:0px);
     @include  Displey ($items: center, $justify:start, $gap: 8px);
     text-decoration:underline;
+
+    &:hover{
+        color: rgb(102, 86, 250);
+    }
+    &:active{
+        opacity: 50%;
+    }
 }
 .hero__btn {
     @include BtnStyle($P:15px   41px, $BC:$clr-btnbc , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-white);
