@@ -1,0 +1,33 @@
+@mixin Displey ($items, $justify, $gap){
+    display: flex;
+    align-items: $items;
+    justify-content: $justify;
+    gap: $gap;
+}
+
+@mixin TextStyle($FW, $FZ, $LH,$LS, $clr , $BM){
+    font-weight:$FW;
+    font-size:$FZ;
+    line-height: $LH;
+    letter-spacing: $LS;
+    color: $clr;
+    margin-bottom: $BM;
+}
+
+@mixin BtnStyle($P, $BC , $BR , $Clr,$clr){
+    padding: $P; 
+    background-color: $BC;
+    border-radius: $BR;
+    border:  1px solid $Clr;
+    color: $clr;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+@mixin BtnStyleText($Fw ,$Fs ,$Lh, $LS){
+    font-weight: $Fw;
+    font-size: $Fs;
+    line-height: $Lh;
+    letter-spacing: $LS;
+
+}

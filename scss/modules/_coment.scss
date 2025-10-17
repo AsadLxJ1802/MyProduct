@@ -1,0 +1,89 @@
+.coment-section {
+    padding: 52px 0 150px;
+    background-image:  url("../images/coment-bg.svg");
+    background-repeat: no-repeat;
+    background-position: center top;
+}
+
+.coment {
+    padding: 0 115px;
+}
+.coment__top-part {
+    text-align: center;
+}
+.coment__title {
+    @include TextStyle($FW: 700, $FZ: 38px, $LH: 100%,$LS: 0px, $clr: $clr-bulue , $BM:16px);
+
+}
+.coment__text {
+    @include TextStyle($FW: 500, $FZ: 16px, $LH:26px,$LS: 0px, $clr: $clr-bulue , $BM:32px);
+    
+    width: 542px;
+    margin:  0 auto;
+}
+.coment__avatar {
+    @include  Displey ($items: center, $justify:space-between, $gap: 0px);
+    margin-bottom: 24px;
+}
+.coment__item {
+    @include  Displey ($items: center, $justify:start, $gap: 16px);
+}
+.coment__item-text {
+    @include TextStyle($FW: 500, $FZ: 16px, $LH:100%,$LS: 0px, $clr: $clr-bulue , $BM:0px);
+    padding: 20px 22px;
+    box-shadow: 0px 2px 15px 0px #173A561A;
+    border-radius: 26px;
+
+}
+.coment__button {
+    @include  Displey ($items: center, $justify:center, $gap: 0px);
+
+}
+.coment__btn {
+    @include BtnStyle($P:15px   31px, $BC:$clr-btnbc , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-white);
+    @include BtnStyleText ($Fw:700 ,$Fs:16px ,$Lh:100%, $LS:0px);
+    &:hover{
+        @include BtnStyle($P:15px 31px, $BC:transparent , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-bulue); 
+    }
+    &:active{
+        opacity: 50%;
+    }
+}
+
+@media(max-width:996px){
+    .coment {
+        padding: 0;
+    }
+
+    .coment-section {
+        padding: 141px 0 100px;
+        background-image:  url("../images/coment-bg.svg");
+        background-repeat: no-repeat;
+        background-position: center top;
+    }
+    .coment__list {
+        @include  Displey ($items: center, $justify:space-between, $gap: 0px);
+        flex-direction: column;
+    }
+    .coment__list--renom{
+        flex-direction: column-reverse;
+    }
+    .coment__avatar {
+        width: 100%;
+        @include  Displey ($items: center, $justify:space-between, $gap: 0px);
+        margin-bottom: 32px;
+        flex-direction: column;
+    } 
+    .coment__text {
+        width: 100%;
+        margin:  0 auto;
+        @include TextStyle($FW: 500, $FZ: 16px, $LH:26px,$LS: 0px, $clr: $clr-bulue , $BM:39px);
+    }
+    .coment__title {
+        width: 100%;
+        @include TextStyle($FW: 700, $FZ: 38px, $LH: 100%,$LS: 0px, $clr: $clr-bulue , $BM:16px);
+    }
+    .coment__item > p {
+        width: 100%;
+    }
+}

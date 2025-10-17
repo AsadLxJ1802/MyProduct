@@ -1,0 +1,69 @@
+.hero-section {
+    padding: 25px 0 114px;
+}
+.hero{
+    @include  Displey ($items: center, $justify:space-between, $gap: 0px);
+    
+}
+.hero__left-content {
+    width: 518px;
+}
+.hero__title {
+    @include TextStyle($FW: 700, $FZ: 40px, $LH: 60px,$LS: 0px, $clr: $clr-bulue , $BM:18px);
+    
+}
+.hero__text {
+    @include TextStyle($FW: 400, $FZ: 18px, $LH: 28px,$LS: 0px, $clr: $clr-bulue , $BM:45px);
+}
+.hero__button {
+    @include  Displey ($items: center, $justify:start, $gap:    30px);
+}
+.hero__button>  a{
+    @include TextStyle($FW: 600, $FZ: 16px, $LH: 100%,$LS: 0px, $clr: $clr-btnbc , $BM:0px);
+    @include  Displey ($items: center, $justify:start, $gap: 8px);
+    text-decoration:underline;
+}
+.hero__btn {
+    @include BtnStyle($P:15px   41px, $BC:$clr-btnbc , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-white);
+    @include BtnStyleText ($Fw:600 ,$Fs:16px ,$Lh:100%, $LS:0px);
+    &:hover{
+        @include BtnStyle($P:15px 41px, $BC:transparent , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-bulue); 
+    }
+    &:active{
+        opacity: 50%;
+    }
+}
+@media(max-width:998px){
+    .hero-section {
+        padding: 29px 0 99px;
+    }
+    .hero{
+        flex-direction: column-reverse;        
+    }
+    .hero__left-content {
+        width: 100%;
+        text-align: center;
+    }
+    .hero__right-img{
+        width: 100%;
+        
+    }
+    .hero__button{
+        @include  Displey ($items: center, $justify:center, $gap:    18px);
+    }
+    .hero__title {
+        @include TextStyle($FW: 700, $FZ: 36px, $LH: 60px,$LS: 0px, $clr: $clr-bulue , $BM:16px);
+        
+    }
+    .hero__text {
+        @include TextStyle($FW: 400, $FZ: 18px, $LH: 28px,$LS: 0px, $clr: $clr-bulue , $BM:32px);
+    }
+    .hero__btn {
+        @include BtnStyle($P:15px   25px, $BC:$clr-btnbc , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-white);
+        @include BtnStyleText ($Fw:600 ,$Fs:16px ,$Lh:100%, $LS:0px);
+        &:hover{
+            @include BtnStyle($P:15px 25px, $BC:transparent , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-bulue); 
+        }
+       
+    }
+}

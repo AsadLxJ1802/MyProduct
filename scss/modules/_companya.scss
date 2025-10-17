@@ -1,0 +1,50 @@
+.company-section {
+    padding-bottom: 150px;
+}
+.company {
+    padding: 0 75px;
+}
+.company__wrapper {
+    padding: 10px 51px;
+    background-color: $clr-btnbc;
+    border-radius: 32px;
+    @include  Displey ($items: center, $justify:space-between, $gap:0px);
+}
+.company__text {
+    @include TextStyle($FW: 600, $FZ: 32px, $LH:151%,$LS: 0px, $clr: $clr-white, $BM:98px);
+
+    width: 510px;
+}
+.company__btn {
+    @include BtnStyle($P:13px 35px, $BC:$clr-white, $BR:4px , $Clr:$clr-btnborder , $clr:$clr-btnbc );
+    @include BtnStyleText ($Fw:600 ,$Fs:16px ,$Lh:100%, $LS:0px);
+    &:hover{
+        @include BtnStyle($P:13px 35px, $BC:transparent , $BR:4px , $Clr:$clr-btnborder, $clr:$clr-bulue);
+    }
+    &:active{
+        opacity: 50%;
+    }
+}
+
+@media(max-width:1073px){
+    .company-section {
+        padding-bottom: 100px;
+    }
+    .company {
+        padding: 0 20px;
+    }
+    .company__wrapper {
+        width: 100%;
+        padding: 17px 22px;
+        @include  Displey ($items: center, $justify:space-between, $gap:0px);
+        flex-direction: column;
+    }
+    .company__text {
+        @include TextStyle($FW: 600, $FZ: 32px, $LH:151%,$LS: 0px, $clr: $clr-white, $BM:104px);
+        width: 100%;
+        text-align: center;
+    }
+    .company__button{
+        text-align: center;
+    }
+}
