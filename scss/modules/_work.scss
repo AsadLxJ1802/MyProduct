@@ -13,7 +13,7 @@
     @include TextStyle($FW: 600, $FZ: 16px, $LH: 100%,$LS: 0px, $clr: $clr-bulue , $BM:12px);    
 }
 .work__title {
-    @include TextStyle($FW: 700, $FZ: 32px, $LH:26px,$LS: 0px, $clr: $clr-bulue , $BM:131px);
+    @include TextStyle($FW: 700, $FZ: 32px, $LH:26px,$LS: 0px, $clr: $clr-bulue , $BM:23px);
 }
 .work__text {
     @include TextStyle($FW: 400, $FZ: 16px, $LH:26px,$LS: 0px, $clr: $clr-bulue , $BM:25px);
